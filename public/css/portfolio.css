@@ -87,16 +87,16 @@ p.blue-text span {
 }
 
 .first {
-  transition: -webkit-filter 1500ms ease-in, opacity 1500ms ease-in;
+  transition: -webkit-filter 1500ms cubic-bezier(.9,.07,.91,1), opacity 1500ms cubic-bezier(.9,.07,.91,1);
 }
 .second {
-  transition: -webkit-filter 1500ms ease-in, opacity 1500ms ease-in;
+  transition: -webkit-filter 1500ms cubic-bezier(.9,.07,.91,1), opacity 1500ms cubic-bezier(.9,.07,.91,1);
 }
 .third {
-  transition: -webkit-filter 2000ms ease-in, opacity 2000ms ease-in;
+  transition: -webkit-filter 2000ms cubic-bezier(.9,.07,.91,1), opacity 2000ms cubic-bezier(.9,.07,.91,1);
 }
 .fourth {
-  transition: -webkit-filter 2500ms ease-in, opacity 2500ms ease-in;
+  transition: -webkit-filter 2500ms cubic-bezier(.9,.07,.91,1), opacity 2500ms cubic-bezier(.9,.07,.91,1);
 }
 p.blue-text span.showMe {
   opacity: 1;
@@ -109,17 +109,30 @@ p.blue-text span.showMe {
 }
 
 .hero .card-title {
+  position: absolute;
   top: 0;
+  left: 10px;
   font-size: 5vw;
   font-weight: 200;
   letter-spacing: -0.03em;
-  width:  100%;
-  text-shadow: 1px 1px 2px #666;
-  transition: font-size 2000ms;
+  width: 100%;
+  text-shadow: 2px 2px 4px #999;
 }
 
-.hero .card-title.start {
-  font-size: 0;
+.hero .card-title .first,
+.hero .card-title .last {
+  position: absolute;
+  width: 50%;
+  left:  0;
+  transition: left 2000ms 800ms ease-in-out;
+}
+
+.hero .card-title.start .first {
+  left: 100%;
+}
+
+.hero .card-title.start .last {
+  left: 110%;
 }
 
 .hero .card {
@@ -143,7 +156,7 @@ p.blue-text span.showMe {
 .intro img {
   margin: 14px;
   transform: scale(1, 1);
-  transition: transform 1000ms linear;
+  transition: transform 1500ms linear;
 }
 
 .intro img.start {
