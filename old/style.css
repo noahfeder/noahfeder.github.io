@@ -1,0 +1,374 @@
+@font-face {
+	font-family: helv;
+	src: url(helv.ttf);
+}
+
+body {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-family: Comfortaa, Arial, Helvetica, sans-serif;
+  background: -webkit-linear-gradient(left, #DCEEFF, #cce 10%, #cce 90%, #DCEEFF);
+  background: linear-gradient(to right, #DCEEFF, #cce 10%, #cce 90%, #DCEEFF);
+  background-color: #77BBFF;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+iframe {
+  position: relative;
+  display: block;
+  width: 414px;
+  height: 736px;
+  max-width: 414px;
+  max-height: 736px;
+  margin: 0 auto;
+  margin-top: 5px;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+  border: 4px groove #77BBFF;
+}
+
+.head-wrapper {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 2em;
+    background: -webkit-linear-gradient(left, #DCEEFF, #3E33FC 10%, #3E33FC 90%, #DCEEFF);
+    background: linear-gradient(to right, #DCEEFF, #3E33FC 10%, #3E33FC 90%, #DCEEFF);
+    background-color: #77BBFF;
+	z-index: 42;
+	filter: opacity(.8);
+	-webkit-filter: opacity(.8);
+	display: none;
+}
+
+header {
+	position: relative;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	        justify-content: center;
+	width: 80vw;
+	left: 10vw;
+	font-size: 1em;
+	line-height: 1em;
+	height: 100%;
+	color: #77BBFF;
+}
+
+.header-item {
+	height: 100%;
+	vertical-align: middle;
+}
+
+header a {
+	display: none;
+	text-decoration: none;
+	color: #77BBFF;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	text-align: center;
+	height: 100%;
+	padding-top: 0.5em;
+}
+
+header a:hover, header a:focus {
+	color: #3E33FC;
+	background-color: #77BBFF;
+	background: -webkit-linear-gradient(top, #DCEEFF, #77BBFF 30%);
+    background: linear-gradient(to bottom, #DCEEFF, #77BBFF 30%);
+}
+
+.name, .contact {
+	position: relative;
+	float: left;
+	margin-left: 10vw;
+	left: 0;
+}
+
+.name {
+	/*font-family: Lato;*/
+	font-weight: 800;
+	color: #3E33FC;
+	font-size: 3em;
+}
+.contact {
+	margin-right: 10vw;
+}
+.phone::before {
+	content: "(901) 428-";
+}
+
+.email::before {
+	content: "noah.feder"
+}
+.spacer {
+	height: 2em;
+	position: relative;
+	width: 5px;
+}
+
+.control-panel {
+	position: fixed;
+	top: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    left: 10px;
+	margin-top: 2.5em;
+    width: calc(8vw - 10px);
+	height: 100%;
+	max-height: 83px;
+  }
+
+.control-panel, .d, .t, .m {
+  display: none;
+}
+
+.control-panel div {
+  border: 1px solid #2391FC;
+  background-color: #A2D1FF;
+  color: #3E33FC;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border-radius: 2px;
+  padding: 2px;
+  text-align: center;
+  margin: 2px;
+  height: 100%;
+  max-height: 1em;
+  cursor: pointer;
+  font-size: 0.8em;
+}
+
+.scrip {
+  width: 414px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.title, .button {
+  font-size: 1.5em;
+  display: inline-block;
+  line-height: 1.5em;
+  color: #3E33FC;
+  font-weight: 500;
+}
+
+.button {
+  position: absolute;
+  right: 0;
+  border-radius: 100%;
+  border: 1px solid #2391FC;
+  background-color: #A2D1FF;
+  color: #2391FC;
+  width: 1.5em;
+  height: 1.5em;
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 3px;
+}
+
+.button:hover, .control-panel div:hover {
+  background-color: #2391FC;
+  border-color: #2391FC;
+  color: #A2D1FF;
+}
+
+.subscrip, .tech {
+  max-height: 0px;
+  opacity: 0;
+  -webkit-transition: all 600ms;
+  transition: all 600ms;
+  text-align: center;
+}
+
+.subscrip {
+  font-size: 1.2em;
+}
+
+.big-only {
+  display: none;
+}
+
+.tech ul {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 10px 0 auto;
+  width: 100%;
+  list-style: none;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  -webkit-padding-start: 0em;
+  -webkit-margin-start: 0em;
+  -webkit-margin-end: 0em;
+}
+
+.tech li {
+	flex: 1 300px;
+	margin: 5px;
+	padding: 5px;
+	width: auto;
+}
+
+.scrip a, .contact a, .back {
+  text-decoration: none;
+  color: black;
+}
+
+.scrip a:hover, .contact a:hover, .back:hover {
+  text-decoration: none;
+  color: #333;
+}
+
+.back {
+	position: relative;
+	right: 0;
+	margin-right: 10vw;
+	display: block;
+	text-align: right;
+}
+.show {
+  max-height: 1000px;
+  opacity: 1;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+}
+
+.mobile {
+  width: 414px;
+  height: 736px;
+  max-width: 414px;
+  max-height: 736px;
+}
+
+.tablet {
+  width: 60vw;
+  height: 80vw;
+  max-width: 768px;
+  max-height: 1024px;
+}
+
+.desktop {
+  width: 80vw;
+  height: 88vh;
+  max-width: 80vw;
+  max-height: 88vh;
+}
+
+.br {
+  min-height: 10px;
+  max-height: 100%;
+}
+
+@media (min-width: 768px) {
+  iframe {
+    width: 60vw;
+    height: 80vw;
+    max-width: 768px;
+    max-height: 1024px;
+  }
+  .control-panel {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .t, .m {
+    display: block;
+  }
+  .scrip {
+    width: 60vw;
+    max-width: 768px;
+  }
+  .button {
+    display: none;
+  }
+  .subscrip, .tech {
+    max-height: 1000px;
+    opacity: 1;
+  }
+  .title {
+    font-size: 2em;
+    line-height: 1em;
+    text-align: center;
+    width: 100%;
+	margin-top: 0.5em;
+  }
+  .head-wrapper, header a {
+	display: block;
+  }
+    header a {
+	  padding-top: 0;
+  }
+  .contact {
+	float: right;
+	text-align: right;
+  }
+    div.big-only {
+	  display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  iframe {
+    width: 80vw;
+    height: 88vh;
+    max-width: 80vw;
+    max-height: 88vh;
+  }
+  .control-panel div {
+	font-size: 1em;
+	max-height: 1.2em;
+  }
+  .d {
+    display: block;
+  }
+  span.big-only {
+    display: inline;
+  }
+
+  .scrip {
+	  width: 80vw;
+	  max-width: 80vw;
+  }  
+  header {
+	font-size: 1.5em;
+	line-height: 1.5em;
+  }
+}
+
+@media (min-width: 1400px) {
+  .title, .subscrip {
+    position: relative;
+    width: auto;
+    display: block;
+    height: 64px;
+    max-height: 64px;
+    margin-top: 16px;
+    vertical-align: bottom;
+  }
+  .title {
+    text-align: left;
+    float: left;
+  }
+  .subscrip {
+    text-align: right;
+    float: right;
+  }
+}

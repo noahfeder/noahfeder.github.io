@@ -1,0 +1,199 @@
+/* SILLINESS ENSUES */
+
+* {
+  transition: all 400ms;
+}
+
+.nineties-button {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  opacity: 0;
+  color: green;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.nineties-button:hover {
+  opacity: 1;
+}
+
+body.nineties,
+body.nineties div,
+body.nineties span {
+  background-color: black!important;
+  background-image: none!important;
+  color: green!important;
+  font-family: Courier!important;
+}
+body.nineties .nineties-button {
+  opacity: 1!important;
+}
+body.nineties div {
+  background-color: black!important;
+  -webkit-filter: none!important;
+}
+
+body.nineties .mobile-only {
+  display: block!important;
+}
+
+body.nineties img,
+body.nineties .hero,
+body.nineties .intro .col.s3,
+body.nineties .card-reveal,
+body.nineties .card-image {
+  height: 0px!important;
+  width: 0px!important;
+  margin: 0px!important;
+  padding: 0px!important;
+  border: 0px!important;
+}
+
+body.nineties .intro .col.s9 {
+  width:  100%!important;
+}
+
+body.nineties .icon {
+  width: 100%!important;
+  height: 100%!important;
+  -webkit-filter: invert(1)!important;
+}
+
+/* SILLINESS ENDS */
+
+.video {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+}
+
+#websites {
+  background-color: #fff;
+  -webkit-filter: drop-shadow(0px 2px 8px #aaa);
+  filter: drop-shadow(0px 2px 8px #aaa);
+}
+
+p.blue-text {
+  font-size: 1.7vw;
+}
+
+p.blue-text span {
+  opacity: 0;
+  -webkit-filter: blur(2px);
+}
+
+.first {
+  transition: -webkit-filter 1500ms ease-in, opacity 1500ms ease-in;
+}
+.second {
+  transition: -webkit-filter 1500ms ease-in, opacity 1500ms ease-in;
+}
+.third {
+  transition: -webkit-filter 2000ms ease-in, opacity 2000ms ease-in;
+}
+.fourth {
+  transition: -webkit-filter 2500ms ease-in, opacity 2500ms ease-in;
+}
+p.blue-text span.showMe {
+  opacity: 1;
+  -webkit-filter: blur(0px);
+}
+
+.hero {
+  width: 100vw;
+  height: 43vw;
+}
+
+.hero .card-title {
+  top: 0;
+  font-size: 5vw;
+  font-weight: 200;
+  letter-spacing: -0.03em;
+  width:  100%;
+  text-shadow: 1px 1px 2px #666;
+  transition: font-size 2000ms;
+}
+
+.hero .card-title.start {
+  font-size: 0;
+}
+
+.hero .card {
+  position: fixed;
+  width: 100vw;
+  z-index: -1;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+.tech {
+  padding-top: 5px;
+  display: block;
+}
+
+.tech-label {
+  font-weight: 600;
+}
+
+.intro img {
+  margin: 14px;
+  transform: scale(1, 1);
+  transition: transform 1000ms linear;
+}
+
+.intro img.start {
+  transform: scale(0, 0);
+}
+
+.icons {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+.icons a {
+  margin: 0px 15px;
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
+  transition: all 400ms;
+  position: relative;
+  display: block;
+}
+
+.icons a .icon {
+  margin:  0;
+  width: 100%;
+  height: 100%;
+}
+
+.mobile-only {
+  display: none;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 550px) {
+  .hero {
+    display: none;
+  }
+  .hero .card-title {
+    font-size: 7vw;
+  }
+  p.blue-text {
+   font-size: 14px;
+  }
+  .mobile-only {
+    display: inline;
+    font-size: 20px;
+  }
+  .icons a {
+    flex: 0 0 18px;
+    width: 18px;
+    height: 18px;
+  }
+
+}
