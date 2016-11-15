@@ -78,7 +78,7 @@ body.nineties .icon {
 }
 
 p.blue-text {
-  font-size: 1.7vw;
+  font-size: 2.7vw;
 }
 
 p.blue-text span {
@@ -105,43 +105,25 @@ p.blue-text span.showMe {
 
 .hero {
   width: 100vw;
-  height: 43vw;
+  height: 30vw;
 }
 
-.hero .card-title {
-  position: absolute;
-  top: 0;
-  left: 10px;
+.first, .last {
+  text-align: center;
   font-size: 5vw;
-  font-weight: 200;
-  letter-spacing: -0.03em;
   width: 100%;
-  text-shadow: 2px 2px 4px #999;
+  margin:  0 0 10px 0;
+  color: #eee;
+  text-shadow: 2px 2px 6px #444;
+  transition: margin-left 2000ms 800ms ease-in-out;
 }
 
-.hero .card-title .first,
-.hero .card-title .last {
-  position: absolute;
-  width: 50%;
-  left:  0;
-  transition: left 2000ms 800ms ease-in-out;
+.start.first {
+  margin-left: 100%;
 }
 
-.hero .card-title.start .first {
-  left: 100%;
-}
-
-.hero .card-title.start .last {
-  left: 110%;
-}
-
-.hero .card {
-  position: fixed;
-  width: 100vw;
-  z-index: -1;
-  background-color: transparent;
-  box-shadow: none;
-  border: none;
+.start.last {
+  margin-left: 110%;
 }
 
 .tech {
@@ -197,7 +179,7 @@ p.blue-text span.showMe {
     font-size: 7vw;
   }
   p.blue-text {
-   font-size: 14px;
+   font-size: 2.7vw;
   }
   .mobile-only {
     display: inline;

@@ -3,7 +3,7 @@ $(function(){
   var $intro = $('.intro')[0];
 
   window.setTimeout(function() {
-    $('span.start').removeClass('start');
+    $('.start').removeClass('start');
   }, 100);
 
   $('.nineties-button').on('click',function() {
