@@ -108,7 +108,7 @@ p.blue-text span.showMe {
   height: 30vw;
 }
 
-.first, .last {
+.hero .first, .hero .last {
   text-align: center;
   font-size: 5vw;
   width: 100%;
